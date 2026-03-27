@@ -32,7 +32,7 @@ const itinerary = {
         { time: "13:30", text: "國際市場巡禮(紅豆奶油艾草麻吉)", stay: "2小時" },
         { time: "15:50", text: "白淺灘文化村", stay: "2小時" },
         { time: "18:30", text: "晚餐-Lee Jae Mo Pizza", type: "food" },
-        { time: "20:50", text: "樂天超市 光慶店", stay: "1小時" }
+        { time: "20:50", text: "樂天超市 光復店", stay: "1小時" }
     ],
     4: [
         { time: "09:00", text: "甘川洞文化村", stay: "3小時" },
