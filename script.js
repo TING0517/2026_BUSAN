@@ -5,6 +5,7 @@ const itinerary = {
         { time: "08:20", text: "早餐-密陽血腸豬肉湯飯 海雲台店", stay: "1小時", type: "food" },
         { time: "09:25", text: "換錢-MONEYBOX HAEUNDAE", stay: "15分" },
         { time: "09:40", text: "海雲台海灘", stay: "20分" },
+        { time: "10:00", text: "自然島鹽麵包 釜山店", stay: "20分", type: "food" },
         { time: "10:30", text: "午餐、休息-CLUB D OASIS汗蒸幕", stay: "3小時", type: "food" },
         { time: "14:00", text: "00、30、45 海雲台藍線公園海岸列車(至松亭)", highlight: true },
         { time: "14:30", text: "松亭海水浴場", stay: "1.5小時" },
@@ -184,7 +185,7 @@ function renderItinerary() {
             <div class="glass-card p-5 rounded-3xl transition-all active:scale-95">
                 <div class="flex justify-between items-start mb-2">
                     <span class="font-bold text-slate-400 tracking-wider font-mono">${item.time}</span>
-                    ${item.stay ? `<span class="text-[12px] bg-sky-50 px-3 py-1 rounded-full text-sky-600 font-bold">待 ${item.stay}</span>` : ''}
+                    ${item.stay ? `<span class="text-[12px] bg-sky-50 px-3 py-1 rounded-full text-sky-600 font-bold"> ${item.stay}</span>` : ''}
                 </div>
                 <h4 class="font-bold text-slate-800 text-xl">${item.text}</h4>
                 <div class="flex gap-3 mt-4">
