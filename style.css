@@ -26,9 +26,17 @@ body {
 }
 
 @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 h1,
@@ -216,11 +224,25 @@ input:focus {
 }
 
 @keyframes petal-fall {
-    0% { top: -10%; transform: rotate(0deg); }
-    100% { top: 110%; transform: rotate(360deg); }
+    0% {
+        top: -10%;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: 110%;
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes petal-shake {
-    0%, 100% { margin-left: 0px; }
-    50% { margin-left: 50px; }
+
+    0%,
+    100% {
+        margin-left: 0px;
+    }
+
+    50% {
+        margin-left: 50px;
+    }
 }
