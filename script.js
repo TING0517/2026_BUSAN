@@ -27,7 +27,7 @@ const itinerary = {
         { time: "08:30", text: "行李寄放-東橫INN 釜山中央站" },
         { time: "10:00", text: "松島纜車、龍宮雲橋", stay: "2.5小時" },
         { time: "12:30", text: "松島天空步道", stay: "20分" },
-        { time: "13:30", text: "午餐-國際炸雞", type: "food" },
+        { time: "13:30", text: "午餐-國際炸雞 富平本店", type: "food" },
         { time: "13:30", text: "國際市場巡禮(紅豆奶油艾草麻吉)", stay: "2小時" },
         { time: "15:50", text: "白淺灘文化村", stay: "2小時" },
         { time: "18:30", text: "晚餐-Lee Jae Mo Pizza", type: "food" },
