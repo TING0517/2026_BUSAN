@@ -11,7 +11,7 @@ const itinerary = {
         { time: "16:00", text: "00、12、30 海雲台藍線公園海岸列車(至青沙浦天空步道)", highlight: true },
         { time: "16:20", text: "青沙浦天空步道", stay: "15分" },
         { time: "16:50", text: "青沙浦漁港", stay: "40分" },
-        { time: "17:50", text: "膠囊列車 (至尾浦)", stay: "30分", highlight: true },
+        { time: "17:50", text: "17:30~18:00 海雲台藍線公園膠囊列車 (至尾浦)", stay: "30分", highlight: true },
         { time: "18:40", text: "釜山 X the SKY", stay: "1小時" },
         { time: "20:00", text: "晚餐-味贊王鹽烤肉", stay: "1.5小時", type: "food" }
     ],
@@ -144,7 +144,7 @@ function getAutoDay() {
     const startDate = new Date('2026-03-29');
     const endDate = new Date('2026-04-04');
     const today = new Date();
-    
+
     // 統一時間基準 (00:00:00) 以進行日期比較
     today.setHours(0, 0, 0, 0);
     startDate.setHours(0, 0, 0, 0);
@@ -419,11 +419,11 @@ window.onload = () => {
         renderItinerary();
         switchDay(autoDay);
     }
-    
+
     if (document.getElementById('guide-container')) {
         renderGuides();
     }
-    
+
     if (document.getElementById('weather-busan')) {
         fetchWeather();
     }
