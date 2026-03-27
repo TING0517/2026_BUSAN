@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>釜山‧大邱 2026 海岸賞櫻之旅</title>
+    <title>2026釜山海岸賞櫻之旅</title>
 
     <!-- Google Fonts: Quicksand & Noto Sans TC -->
     <link
@@ -20,20 +20,18 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Favicon (Emoji) -->
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
 </head>
 
 <body class="pb-32">
 
     <!-- Header & Flight Info -->
-    <header class="coastal-gradient text-white pt-8 pb-16 px-6 rounded-b-[3.5rem] shadow-2xl relative overflow-hidden">
+    <header id="main-header"
+        class="coastal-gradient text-white pt-8 pb-16 px-6 rounded-b-[3.5rem] shadow-2xl relative overflow-hidden">
         <div class="absolute top-[-20px] right-[-20px] opacity-10 text-[10rem] rotate-12">
             <i class="fas fa-ship"></i>
         </div>
 
-        <h1 class="text-4xl font-bold mb-2 tracking-tight drop-shadow-md">釜山櫻花季 🌊</h1>
+        <h1 class="text-4xl font-bold mb-2 tracking-tight drop-shadow-md">2026 釜山海岸賞櫻之旅 🌊</h1>
         <p class="text-sky-100 text-sm mb-6 flex items-center gap-2 font-medium">
             <i class="fas fa-calendar-day"></i> 2026.03.29 - 04.04 (7天6夜)
         </p>
@@ -44,8 +42,9 @@
                 <div class="bg-white/20 w-10 h-10 rounded-xl flex items-center justify-center">
                     <i class="fas fa-plane-departure"></i>
                 </div>
-                <div class="flex-1 text-sm">
-                    <span class="block opacity-60 text-[10px] font-bold uppercase tracking-wider">去程 3/29</span>
+                <div class="flex-1">
+                    <span class="block opacity-60 text-[14px] font-bold uppercase tracking-wider">去程 3/29 · 濟州航空
+                        7C6164</span>
                     <span class="font-bold">02:50 TPE → 06:10 PUS</span>
                 </div>
             </div>
@@ -54,8 +53,9 @@
                 <div class="bg-white/20 w-10 h-10 rounded-xl flex items-center justify-center">
                     <i class="fas fa-plane-arrival"></i>
                 </div>
-                <div class="flex-1 text-sm">
-                    <span class="block opacity-60 text-[10px] font-bold uppercase tracking-wider">回程 4/4</span>
+                <div class="flex-1">
+                    <span class="block opacity-60 text-[14px] font-bold uppercase tracking-wider">回程 4/4 · 德威航空
+                        TW663</span>
                     <span class="font-bold">22:50 TAE → 00:25 TPE</span>
                 </div>
             </div>
@@ -87,40 +87,40 @@
             </div>
 
             <!-- Day Selector -->
-            <div class="flex gap-4 overflow-x-auto pb-6 hide-scrollbar snap-x">
+            <div class="flex gap-4 overflow-x-auto px-6 pt-1 pb-6 hide-scrollbar snap-x">
                 <button onclick="switchDay(1)"
                     class="day-btn snap-center flex-shrink-0 px-6 py-4 rounded-3xl bg-white shadow-sm border border-slate-100 min-w-[100px] font-bold text-center active-day">
-                    <span class="block text-[11px] opacity-50 uppercase mb-1">D1</span>
+                    <span class="block text-[14px] opacity-50 uppercase mb-1">D1</span>
                     3/29
                 </button>
                 <button onclick="switchDay(2)"
                     class="day-btn snap-center flex-shrink-0 px-6 py-4 rounded-3xl bg-white shadow-sm border border-slate-100 min-w-[100px] font-bold text-center">
-                    <span class="block text-[11px] opacity-50 uppercase mb-1">D2</span>
+                    <span class="block text-[14px] opacity-50 uppercase mb-1">D2</span>
                     3/30
                 </button>
                 <button onclick="switchDay(3)"
                     class="day-btn snap-center flex-shrink-0 px-6 py-4 rounded-3xl bg-white shadow-sm border border-slate-100 min-w-[100px] font-bold text-center">
-                    <span class="block text-[11px] opacity-50 uppercase mb-1">D3</span>
+                    <span class="block text-[14px] opacity-50 uppercase mb-1">D3</span>
                     3/31
                 </button>
                 <button onclick="switchDay(4)"
                     class="day-btn snap-center flex-shrink-0 px-6 py-4 rounded-3xl bg-white shadow-sm border border-slate-100 min-w-[100px] font-bold text-center">
-                    <span class="block text-[11px] opacity-50 uppercase mb-1">D4</span>
+                    <span class="block text-[14px] opacity-50 uppercase mb-1">D4</span>
                     4/01
                 </button>
                 <button onclick="switchDay(5)"
                     class="day-btn snap-center flex-shrink-0 px-6 py-4 rounded-3xl bg-white shadow-sm border border-slate-100 min-w-[100px] font-bold text-center">
-                    <span class="block text-[11px] opacity-50 uppercase mb-1">D5</span>
+                    <span class="block text-[14px] opacity-50 uppercase mb-1">D5</span>
                     4/02
                 </button>
                 <button onclick="switchDay(6)"
                     class="day-btn snap-center flex-shrink-0 px-6 py-4 rounded-3xl bg-white shadow-sm border border-slate-100 min-w-[100px] font-bold text-center">
-                    <span class="block text-[11px] opacity-50 uppercase mb-1">D6</span>
+                    <span class="block text-[14px] opacity-50 uppercase mb-1">D6</span>
                     4/03
                 </button>
                 <button onclick="switchDay(7)"
                     class="day-btn snap-center flex-shrink-0 px-6 py-4 rounded-3xl bg-white shadow-sm border border-slate-100 min-w-[100px] font-bold text-center">
-                    <span class="block text-[11px] opacity-50 uppercase mb-1">D7</span>
+                    <span class="block text-[14px] opacity-50 uppercase mb-1">D7</span>
                     4/04
                 </button>
             </div>
@@ -150,71 +150,72 @@
 
         <!-- CALCULATOR Section (舊名錢包) -->
         <section id="page-wallet" class="tab-page hidden">
-            <h2 class="text-3xl font-bold text-slate-800 mb-8">匯率計算機</h2>
-
-            <div class="bg-white rounded-[3rem] p-10 shadow-2xl border border-slate-100">
-                <div class="flex justify-between items-center mb-8">
-                    <span class="px-5 py-2 bg-sky-100 text-sky-700 rounded-full text-sm font-bold tracking-wider">匯率 1 :
-                        46</span>
-                    <button onclick="resetCalculator()"
-                        class="text-slate-400 hover:text-red-500 transition-colors p-2 text-xl">
-                        <i class="fas fa-redo"></i>
+            <div class="bg-white rounded-[2.5rem] p-6 shadow-2xl border border-slate-100 overflow-hidden">
+                <!-- Top Info & Reset -->
+                <div class="flex justify-between items-center mb-4">
+                    <button onclick="changeFxRate()" id="fx-rate-display"
+                        class="px-4 py-1.5 bg-sky-50 text-sky-600 rounded-full text-s font-bold tracking-wider active:scale-95 transition-transform">
+                        匯率 1 : 46
+                    </button>
+                    <button onclick="resetCalculator()" class="text-slate-300 hover:text-red-500 transition-colors p-2">
+                        <i class="fas fa-redo text-lg"></i>
                     </button>
                 </div>
 
-                <div class="space-y-6">
+                <!-- Display Area -->
+                <div class="space-y-2 mb-6">
                     <div class="relative">
                         <label
-                            class="block text-[12px] font-extrabold text-slate-400 uppercase tracking-widest mb-3 pl-2">計算過程
-                            (KRW)</label>
-                        <input id="calc-input" type="text" readonly placeholder="0"
-                            class="w-full bg-slate-50 border-none px-8 py-6 rounded-[2rem] text-3xl font-extrabold text-right shadow-inner mb-4">
-
-                        <!-- Keypad Grid -->
-                        <div class="grid grid-cols-4 gap-3">
-                            <button onclick="appendCalc('7')" class="calc-btn text-slate-700">7</button>
-                            <button onclick="appendCalc('8')" class="calc-btn text-slate-700">8</button>
-                            <button onclick="appendCalc('9')" class="calc-btn text-slate-700">9</button>
-                            <button onclick="appendCalc('/')" class="calc-btn bg-sky-50 text-sky-600">÷</button>
-
-                            <button onclick="appendCalc('4')" class="calc-btn text-slate-700">4</button>
-                            <button onclick="appendCalc('5')" class="calc-btn text-slate-700">5</button>
-                            <button onclick="appendCalc('6')" class="calc-btn text-slate-700">6</button>
-                            <button onclick="appendCalc('*')" class="calc-btn bg-sky-50 text-sky-600">×</button>
-
-                            <button onclick="appendCalc('1')" class="calc-btn text-slate-700">1</button>
-                            <button onclick="appendCalc('2')" class="calc-btn text-slate-700">2</button>
-                            <button onclick="appendCalc('3')" class="calc-btn text-slate-700">3</button>
-                            <button onclick="appendCalc('-')" class="calc-btn bg-sky-50 text-sky-600">-</button>
-
-                            <button onclick="appendCalc('0')" class="calc-btn text-slate-700">0</button>
-                            <button onclick="appendCalc('.')" class="calc-btn text-slate-700">.</button>
-                            <button onclick="clearCalc()" class="calc-btn bg-red-50 text-red-500 text-lg">C</button>
-                            <button onclick="appendCalc('+')" class="calc-btn bg-sky-50 text-sky-600">+</button>
-                        </div>
-
-                        <!-- Equal Button -->
-                        <button id="calc-equal-btn" onclick="performManualCalc()"
-                            class="w-full mt-4 bg-sky-600 text-white py-5 rounded-[1.5rem] shadow-xl active:scale-95 transition-all hidden flex items-center justify-center font-bold text-xl">
-                            完成計算 (=)
-                        </button>
+                            class="block text-[14px] font-black text-slate-300 uppercase tracking-widest mb-1 pl-2">KRW
+                            (計算過程)</label>
+                        <div id="calc-display"
+                            class="w-full bg-slate-50 border-none px-6 py-4 rounded-2xl text-xl font-black text-right shadow-inner min-h-[70px] flex items-center justify-end break-all overflow-y-auto">
+                            0</div>
                     </div>
 
-                    <div class="flex flex-col items-center">
-                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center mb-6">
-                            <i class="fas fa-long-arrow-alt-down text-slate-400 text-xl"></i>
+                    <div class="bg-sky-600 p-6 rounded-[2rem] shadow-lg relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-4 opacity-10">
+                            <i class="fas fa-coins text-4xl text-white"></i>
                         </div>
-
-                        <div
-                            class="text-center w-full bg-sky-50 p-10 rounded-[2.5rem] border-2 border-dashed border-sky-100 shadow-sm">
-                            <span
-                                class="block text-[12px] font-extrabold text-sky-400 uppercase tracking-widest mb-3">等值台幣
-                                (TWD)</span>
-                            <span id="res-twd" class="text-6xl font-black text-sky-600 tracking-tighter">0</span>
+                        <label
+                            class="block text-[10px] font-black text-white/60 uppercase tracking-widest mb-1">TWD</label>
+                        <div class="flex items-baseline justify-end gap-2">
+                            <span id="res-twd" class="text-5xl font-black text-white tracking-tighter">0</span>
+                            <span class="text-white/60 text-xs font-bold">元</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Keypad -->
+                <div class="grid grid-cols-4 gap-2">
+                    <button onclick="appendCalc('7')" class="calc-btn text-slate-700 bg-slate-50">7</button>
+                    <button onclick="appendCalc('8')" class="calc-btn text-slate-700 bg-slate-50">8</button>
+                    <button onclick="appendCalc('9')" class="calc-btn text-slate-700 bg-slate-50">9</button>
+                    <button onclick="appendCalc('/')" class="calc-btn bg-sky-50 text-sky-600">÷</button>
+
+                    <button onclick="appendCalc('4')" class="calc-btn text-slate-700 bg-slate-50">4</button>
+                    <button onclick="appendCalc('5')" class="calc-btn text-slate-700 bg-slate-50">5</button>
+                    <button onclick="appendCalc('6')" class="calc-btn text-slate-700 bg-slate-50">6</button>
+                    <button onclick="appendCalc('*')" class="calc-btn bg-sky-50 text-sky-600">×</button>
+
+                    <button onclick="appendCalc('1')" class="calc-btn text-slate-700 bg-slate-50">1</button>
+                    <button onclick="appendCalc('2')" class="calc-btn text-slate-700 bg-slate-50">2</button>
+                    <button onclick="appendCalc('3')" class="calc-btn text-slate-700 bg-slate-50">3</button>
+                    <button onclick="appendCalc('-')" class="calc-btn bg-sky-50 text-sky-600">-</button>
+
+                    <button onclick="appendCalc('0')" class="calc-btn text-slate-700 bg-slate-50">0</button>
+                    <button onclick="appendCalc('.')" class="calc-btn text-slate-700 bg-slate-50">.</button>
+                    <button onclick="clearCalc()" class="calc-btn bg-red-50 text-red-500 font-bold">C</button>
+                    <button onclick="appendCalc('+')" class="calc-btn bg-sky-50 text-sky-600">+</button>
+                </div>
+
+                <!-- Equal Button Floating -->
+                <button id="calc-equal-btn" onclick="performManualCalc()"
+                    class="w-full mt-3 bg-emerald-500 text-white py-4 rounded-2xl shadow-lg active:scale-95 transition-all hidden flex items-center justify-center font-bold text-lg">
+                    完成計算 (=)
+                </button>
             </div>
+            <div class="h-10"></div>
         </section>
 
         <!-- WEATHER Section (舊名工具) -->

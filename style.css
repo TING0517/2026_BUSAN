@@ -17,12 +17,17 @@ body {
     color: #1E293B;
     min-height: 100vh;
     -webkit-tap-highlight-color: transparent;
-    font-size: 1.1rem; /* 文字放大 10% */
+    font-size: 1.1rem;
+    /* 文字放大 10% */
     line-height: 1.6;
-    padding-bottom: 140px; /* 預留底部選單空間 */
+    padding-bottom: 140px;
+    /* 預留底部選單空間 */
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-weight: 700;
 }
 
@@ -42,17 +47,38 @@ h1, h2, h3, h4 {
     min-height: 40px;
 }
 
-.parallax > use {
+.parallax>use {
     animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
-.parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 7s; }
-.parallax > use:nth-child(2) { animation-delay: -3s; animation-duration: 10s; }
-.parallax > use:nth-child(3) { animation-delay: -4s; animation-duration: 13s; }
-.parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 20s; }
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
 
 @keyframes move-forever {
-    0% { transform: translate3d(-90px, 0, 0); }
-    100% { transform: translate3d(85px, 0, 0); }
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
 }
 
 .glass-card {
@@ -72,7 +98,7 @@ h1, h2, h3, h4 {
     color: white !important;
     border-color: var(--sea-blue) !important;
     transform: scale(1.05);
-    box-shadow: 0 10px 15px -3px rgba(0, 119, 182, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 119, 182, 0.3);
 }
 
 .active-day span {
@@ -84,6 +110,7 @@ h1, h2, h3, h4 {
     color: var(--sea-blue);
     font-weight: 700;
 }
+
 .nav-active i {
     transform: translateY(-5px);
     filter: drop-shadow(0 4px 6px rgba(0, 119, 182, 0.3));
@@ -101,14 +128,40 @@ h1, h2, h3, h4 {
 }
 
 /* Utils */
-.hide-scrollbar::-webkit-scrollbar { display: none; }
-.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
 
-input:focus { outline: none; border-color: var(--sea-blue); box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.1); }
-.btn-press:active { transform: scale(0.96); }
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
 
-.fade-in { animation: fadeIn 0.4s ease-out forwards; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+input:focus {
+    outline: none;
+    border-color: var(--sea-blue);
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.1);
+}
+
+.btn-press:active {
+    transform: scale(0.96);
+}
+
+.fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* Calculator Keypad */
 .calc-btn {
