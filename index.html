@@ -23,38 +23,40 @@
 </head>
 
 <body class="pb-32">
+    <!-- Background Animation Container -->
+    <div id="bg-animation-container"></div>
 
     <!-- Header & Flight Info -->
     <header id="main-header"
-        class="coastal-gradient text-white pt-8 pb-16 px-6 rounded-b-[3.5rem] shadow-2xl relative overflow-hidden">
-        <div class="absolute top-[-20px] right-[-20px] opacity-10 text-[10rem] rotate-12">
+        class="coastal-gradient text-white pt-6 pb-12 px-6 rounded-b-[2.5rem] shadow-2xl relative overflow-hidden">
+        <div class="absolute top-[-20px] right-[-20px] opacity-10 text-[8rem] rotate-12">
             <i class="fas fa-ship"></i>
         </div>
 
-        <h1 class="text-4xl font-bold mb-2 tracking-tight drop-shadow-md">2026 釜山海岸賞櫻之旅 🌊</h1>
-        <p class="text-sky-100 text-sm mb-6 flex items-center gap-2 font-medium">
+        <h1 class="text-3xl font-bold mb-1 tracking-tight drop-shadow-md">釜山海岸賞櫻之旅 🌊</h1>
+        <p class="text-sky-100 text-sm mb-4 flex items-center gap-2 font-medium">
             <i class="fas fa-calendar-day"></i> 2026.03.29 - 04.04 (7天6夜)
         </p>
 
-        <div class="grid grid-cols-1 gap-3 relative z-10">
+        <div class="grid grid-cols-1 gap-2 relative z-10">
             <div
-                class="bg-white/10 backdrop-blur-lg border border-white/20 px-4 py-3 rounded-2xl flex items-center gap-4">
-                <div class="bg-white/20 w-10 h-10 rounded-xl flex items-center justify-center">
+                class="bg-white/10 backdrop-blur-lg border border-white/20 px-4 py-2 rounded-2xl flex items-center gap-4">
+                <div class="bg-white/20 w-9 h-9 rounded-xl flex items-center justify-center">
                     <i class="fas fa-plane-departure"></i>
                 </div>
                 <div class="flex-1">
-                    <span class="block opacity-60 text-[14px] font-bold uppercase tracking-wider">去程 3/29 · 濟州航空
+                    <span class="block opacity-60 text-[13px] font-bold uppercase tracking-wider">去程 3/29 · 濟州航空
                         7C6164</span>
                     <span class="font-bold">02:50 TPE → 06:10 PUS</span>
                 </div>
             </div>
             <div
-                class="bg-white/10 backdrop-blur-lg border border-white/20 px-4 py-3 rounded-2xl flex items-center gap-4">
-                <div class="bg-white/20 w-10 h-10 rounded-xl flex items-center justify-center">
+                class="bg-white/10 backdrop-blur-lg border border-white/20 px-4 py-2 rounded-2xl flex items-center gap-4">
+                <div class="bg-white/20 w-9 h-9 rounded-xl flex items-center justify-center">
                     <i class="fas fa-plane-arrival"></i>
                 </div>
                 <div class="flex-1">
-                    <span class="block opacity-60 text-[14px] font-bold uppercase tracking-wider">回程 4/4 · 德威航空
+                    <span class="block opacity-60 text-[13px] font-bold uppercase tracking-wider">回程 4/4 · 德威航空
                         TW663</span>
                     <span class="font-bold">22:50 TAE → 00:25 TPE</span>
                 </div>
@@ -141,7 +143,7 @@
         </section>
 
         <!-- GUIDE Section -->
-        <section id="page-guide" class="tab-page hidden">
+        <section id="page-guide" class="tab-page pt-4 hidden">
             <h2 class="text-3xl font-bold text-slate-800 mb-8">絕美釜山‧大邱</h2>
             <div id="guide-container" class="space-y-8">
                 <!-- Guide content will be injected by JS -->
@@ -150,7 +152,7 @@
 
         <!-- CALCULATOR Section (舊名錢包) -->
         <section id="page-wallet" class="tab-page hidden">
-            <div class="bg-white rounded-[2.5rem] p-6 shadow-2xl border border-slate-100 overflow-hidden">
+            <div class="bg-white rounded-[2.5rem] p-5 shadow-2xl border border-slate-100 overflow-hidden">
                 <!-- Top Info & Reset -->
                 <div class="flex justify-between items-center mb-4">
                     <button onclick="changeFxRate()" id="fx-rate-display"
@@ -163,31 +165,31 @@
                 </div>
 
                 <!-- Display Area -->
-                <div class="space-y-2 mb-6">
+                <div class="space-y-2 mb-4">
                     <div class="relative">
                         <label
                             class="block text-[14px] font-black text-slate-300 uppercase tracking-widest mb-1 pl-2">KRW
                             (計算過程)</label>
                         <div id="calc-display"
-                            class="w-full bg-slate-50 border-none px-6 py-4 rounded-2xl text-xl font-black text-right shadow-inner min-h-[70px] flex items-center justify-end break-all overflow-y-auto">
+                            class="w-full bg-slate-50 border-none px-6 py-3 rounded-2xl text-lg font-black text-right shadow-inner min-h-[60px] flex items-center justify-end break-all overflow-y-auto">
                             0</div>
                     </div>
 
-                    <div class="bg-sky-600 p-6 rounded-[2rem] shadow-lg relative overflow-hidden">
+                    <div class="bg-sky-600 p-4 rounded-[1.75rem] shadow-lg relative overflow-hidden">
                         <div class="absolute top-0 right-0 p-4 opacity-10">
                             <i class="fas fa-coins text-4xl text-white"></i>
                         </div>
                         <label
                             class="block text-[10px] font-black text-white/60 uppercase tracking-widest mb-1">TWD</label>
                         <div class="flex items-baseline justify-end gap-2">
-                            <span id="res-twd" class="text-5xl font-black text-white tracking-tighter">0</span>
+                            <span id="res-twd" class="text-4xl font-black text-white tracking-tighter">0</span>
                             <span class="text-white/60 text-xs font-bold">元</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Keypad -->
-                <div class="grid grid-cols-4 gap-2">
+                <div class="grid grid-cols-4 gap-1.5">
                     <button onclick="appendCalc('7')" class="calc-btn text-slate-700 bg-slate-50">7</button>
                     <button onclick="appendCalc('8')" class="calc-btn text-slate-700 bg-slate-50">8</button>
                     <button onclick="appendCalc('9')" class="calc-btn text-slate-700 bg-slate-50">9</button>
@@ -219,7 +221,7 @@
         </section>
 
         <!-- WEATHER Section (舊名工具) -->
-        <section id="page-info" class="tab-page hidden">
+        <section id="page-info" class="tab-page pt-4 hidden">
             <h2 class="text-3xl font-bold text-slate-800 mb-8">氣象概況</h2>
 
             <div class="space-y-8">

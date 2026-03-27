@@ -148,10 +148,11 @@ function showPage(pageId) {
         targetPage.classList.add('fade-in');
     }
 
-    // 當進入計算機頁面時隱藏 Header，騰出垂直空間
+    // 當進入特定頁面 (如計算機、導覽、天氣) 時隱藏 Header，騰出垂直空間
     const header = document.getElementById('main-header');
     if (header) {
-        if (pageId === 'wallet') header.classList.add('hidden');
+        const noHeaderPages = ['wallet', 'guide', 'info'];
+        if (noHeaderPages.includes(pageId)) header.classList.add('hidden');
         else header.classList.remove('hidden');
     }
 
@@ -416,6 +417,35 @@ function getWeatherIcon(code) {
     return 'fa-cloud';
 }
 
+function initPetals() {
+    const container = document.getElementById('bg-animation-container');
+    if (!container) return;
+    const petalCount = 15; // 適中數量
+
+    for (let i = 0; i < petalCount; i++) {
+        const petal = document.createElement('div');
+        petal.className = 'petal';
+        
+        // 隨機尺寸
+        const size = Math.random() * 10 + 10 + 'px';
+        petal.style.width = size;
+        petal.style.height = size;
+        
+        // 隨機水平位置
+        petal.style.left = Math.random() * 100 + 'vw';
+        
+        // 隨機動畫時間與延遲
+        const duration = Math.random() * 10 + 10 + 's';
+        const delay = Math.random() * 10 + 's';
+        const shakeDuration = Math.random() * 2 + 2 + 's';
+        
+        petal.style.animationDuration = `${duration}, ${shakeDuration}`;
+        petal.style.animationDelay = `${delay}, ${delay}`;
+        
+        container.appendChild(petal);
+    }
+}
+
 // --- INIT ---
 window.onload = () => {
     // 優先讀取紀錄中的匯率
@@ -429,5 +459,6 @@ window.onload = () => {
     renderItinerary();
     renderGuides();
     fetchWeather();
+    initPetals();
     switchDay(1);
 };
