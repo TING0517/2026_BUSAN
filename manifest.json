@@ -1,0 +1,17 @@
+{
+  "name": "2026釜山海岸賞櫻之旅",
+  "short_name": "釜山賞櫻",
+  "description": "釜山與大邱之旅隨身小幫手",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#03045E",
+  "theme_color": "#0077B6",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
