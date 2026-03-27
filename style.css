@@ -23,6 +23,11 @@ body {
     line-height: 1.6;
     padding-bottom: 140px;
     overflow-x: hidden;
+    overscroll-behavior-y: contain; /* 禁用下拉刷新 */
+}
+
+html {
+    overscroll-behavior-y: contain; /* 確保 html 層級也禁用 */
 }
 
 @keyframes gradientBG {
