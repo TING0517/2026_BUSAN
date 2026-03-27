@@ -226,12 +226,12 @@ async function fetchWeather() {
 
     for (const city of cities) {
         try {
-            // 使用 AllOrigins 代理繞過本地 CORS 限制
-            const targetUrl = encodeURIComponent(`https://wttr.in/${city.name}?format=j1&lang=zh-tw`);
-            const proxyUrl = `https://api.allorigins.win/raw?url=${targetUrl}`;
+            // 使用 corsproxy.io 代理繞過本地 CORS 限制，比 AllOrigins 更穩定
+            const targetUrl = `https://wttr.in/${city.name}?format=j1&lang=zh-tw`;
+            const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`;
             
             const res = await fetch(proxyUrl);
-            if (!res.ok) throw new Error('Fetch failed');
+            if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
             const data = await res.json();
             
             const current = data.current_condition[0];
