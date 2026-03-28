@@ -57,17 +57,37 @@ function formatNumber(n) {
 }
 
 function updateTotals() {
-    const totalKrw = expenses.reduce((sum, item) => sum + (parseFloat(item.price) || 0), 0);
-    const totalTwd = Math.round(totalKrw / fxRate);
+    // 總額累記容器
+    let totalKrwCount = 0;
+    let totalTwdCount = 0;
 
-    const behalfItems = expenses.filter(item => item.isOnBehalf);
-    const behalfKrw = behalfItems.reduce((sum, item) => sum + (parseFloat(item.price) || 0), 0);
-    const behalfTwd = Math.round(behalfKrw / fxRate);
+    // 代付金額累記容器
+    let behalfKrwCount = 0;
+    let behalfTwdCount = 0;
 
-    document.getElementById('total-krw').innerText = formatNumber(totalKrw);
-    document.getElementById('total-twd').innerText = formatNumber(totalTwd);
-    document.getElementById('behalf-krw').innerText = formatNumber(behalfKrw);
-    document.getElementById('behalf-twd').innerText = formatNumber(behalfTwd);
+    expenses.forEach(item => {
+        const priceKrw = parseFloat(item.price) || 0;
+        const priceOri = parseFloat(item.originalPrice) || 0;
+        const isTwd = item.currency === 'TWD';
+        const isOnBehalf = item.isOnBehalf === true;
+
+        // 1. 韓元總額計算：一律使用換算後的韓元值 (price)
+        totalKrwCount += priceKrw;
+        if (isOnBehalf) behalfKrwCount += priceKrw;
+
+        // 2. 台幣總額計算：
+        // 如果原本就是台幣計帳，直接用原始金額；如果是韓元，則按當前匯率換算
+        const entryTwd = isTwd ? priceOri : (priceKrw / fxRate);
+        totalTwdCount += entryTwd;
+        if (isOnBehalf) behalfTwdCount += entryTwd;
+    });
+
+    // 渲染到介面
+    const totalTwdEl = document.getElementById('total-twd');
+    const behalfTwdEl = document.getElementById('behalf-twd');
+    
+    if (totalTwdEl) totalTwdEl.innerText = formatNumber(Math.round(totalTwdCount));
+    if (behalfTwdEl) behalfTwdEl.innerText = formatNumber(Math.round(behalfTwdCount));
 }
 
 // --- UI RENDER ---
@@ -207,7 +227,6 @@ window.openModal = function () {
     form.reset();
     document.getElementById('entry-id').value = '';
     document.getElementById('entry-date').value = new Date().toISOString().split('T')[0];
-    document.getElementById('modal-calc-res').innerText = '0';
     title.innerText = "新增支出項目";
     delBtn.classList.add('hidden');
     document.getElementById('entry-behalf').checked = false;
@@ -233,10 +252,7 @@ window.openEditModal = function (id) {
     document.getElementById('delete-btn').classList.remove('hidden');
     window.setCurrency(item.currency || 'KRW');
 
-    // Trigger price display
-    const val = parseFloat(document.getElementById('entry-price').value);
-    const res = item.currency === 'TWD' ? Math.round(val * fxRate) : Math.round(val / fxRate);
-    document.getElementById('modal-calc-res').innerText = formatNumber(res);
+    window.setCurrency(item.currency || 'KRW');
 };
 
 window.closeModal = function () {
@@ -251,24 +267,16 @@ window.setCurrency = function (cur) {
     const btnKrw = document.getElementById('btn-krw');
     const btnTwd = document.getElementById('btn-twd');
     const priceLabel = document.getElementById('price-label');
-    const calcLabel = document.getElementById('calc-label');
 
     if (cur === 'KRW') {
         btnKrw.classList.add('active');
         btnTwd.classList.remove('active');
         priceLabel.innerText = '金額 (KRW)';
-        calcLabel.innerText = '換算台幣';
     } else {
         btnTwd.classList.add('active');
         btnKrw.classList.remove('active');
         priceLabel.innerText = '金額 (TWD)';
-        calcLabel.innerText = '換算韓元';
     }
-
-    // Recalculate preview
-    const val = parseFloat(document.getElementById('entry-price').value) || 0;
-    const res = cur === 'KRW' ? Math.round(val / fxRate) : Math.round(val * fxRate);
-    document.getElementById('modal-calc-res').innerText = formatNumber(res);
 }
 
 window.setFilterDate = function (date) {
@@ -293,11 +301,9 @@ function scrollToActiveDate() {
     }
 }
 
-// Real-time calculation in modal
+// Real-time calculation in modal (Removed preview per user request)
 document.getElementById('entry-price')?.addEventListener('input', (e) => {
-    const val = parseFloat(e.target.value) || 0;
-    const res = currentCurrency === 'KRW' ? Math.round(val / fxRate) : Math.round(val * fxRate);
-    document.getElementById('modal-calc-res').innerText = formatNumber(res);
+    // No action needed for preview
 });
 
 // --- DATABASE OPERATIONS ---

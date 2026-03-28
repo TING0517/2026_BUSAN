@@ -1,10 +1,11 @@
-const CACHE_NAME = 'busan-travel-v1.4'; // 每次更新程式碼後，請修改此版本號
+const CACHE_NAME = 'busan-travel-v1.6'; // 每次更新程式碼後，請修改此版本號
 
 const ASSETS = [
   './',
   'index.html',
   'guide.html',
   'wallet.html',
+  'ledger.html',
   'weather.html',
   'style.css',
   'script.js',
@@ -22,7 +23,7 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// 激活時清理舊的快取資料
+// 激活時清理舊的快取資料並立即接管頁面
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -34,14 +35,29 @@ self.addEventListener('activate', (event) => {
           }
         })
       );
+    }).then(() => {
+        return self.clients.claim(); // 強制接管所有頁面
     })
   );
 });
 
+// 網路優先策略 (Network First)
 self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
-    })
+    fetch(event.request)
+      .then((response) => {
+        // 如果抓取成功，將其更新到快取中
+        if (response && response.status === 200 && event.request.method === 'GET') {
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseClone);
+          });
+        }
+        return response;
+      })
+      .catch(() => {
+        // 連網失敗時才查找快取
+        return caches.match(event.request);
+      })
   );
 });

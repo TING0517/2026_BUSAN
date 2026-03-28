@@ -36,6 +36,14 @@
                     .then(reg => console.log('SW registered!', reg))
                     .catch(err => console.log('SW registration failed!', err));
             });
+
+            // 偵測 Service Worker 更新並自動重載頁面
+            let refreshing = false;
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                if (refreshing) return;
+                window.location.reload();
+                refreshing = true;
+            });
         }
     </script>
 
