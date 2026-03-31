@@ -14,14 +14,13 @@ const itinerary = {
         { time: "16:50", text: "青沙浦漁港", stay: "40分" },
         { time: "17:50", text: "17:30~18:00 海雲台藍線公園膠囊列車 (至尾浦)", stay: "30分", highlight: true },
         { time: "18:40", text: "釜山 X the SKY", stay: "1小時" },
-        { time: "20:00", text: "晚餐-味贊王鹽烤肉", stay: "1.5小時", type: "food" }
+        { time: "20:00", text: "晚餐-伍班長烤肉", stay: "1.5小時", type: "food" }
     ],
     2: [
         { time: "08:45", text: "海東龍宮寺", stay: "1.5小時" },
         { time: "10:30", text: "釜山樂天世界冒險樂園", stay: "3.5小時" },
         { time: "10:30", text: "Skyline Luge 釜山" },
-        { time: "14:00", text: "午餐-Lotte Outlets(3F螞蟻家辣炒章魚 )", type: "food" },
-        { time: "16:30", text: "16:30 鑽石灣遊艇碼頭", highlight: true },
+        { time: "14:00", text: "Lotte Outlets ＆ 午餐-螞蟻家辣炒章魚 )", type: "food" },
         { time: "18:00", text: "晚餐、休息-SPA LAND 汗蒸幕", stay: "4小時" }
     ],
     3: [
@@ -31,41 +30,40 @@ const itinerary = {
         { time: "13:30", text: "午餐-國際炸雞 富平本店", type: "food" },
         { time: "13:30", text: "國際市場巡禮(紅豆奶油艾草麻吉)", stay: "2小時" },
         { time: "15:50", text: "白淺灘文化村", stay: "2小時" },
-        { time: "18:30", text: "晚餐-Lee Jae Mo Pizza", type: "food" },
-        { time: "20:50", text: "樂天超市 光復店", stay: "1小時" }
+        { time: "18:30", text: "晚餐-Lee Jae Mo Pizza", type: "food" }    
     ],
     4: [
-        { time: "09:00", text: "甘川洞文化村", stay: "3小時" },
-        { time: "12:20", text: "午餐-南浦雪農湯", type: "food" },
-        { time: "13:20", text: "札嘎其市場 & BIFF 廣場", stay: "3小時" },
-        { time: "16:00", text: "南川洞櫻花路", highlight: true },
-        { time: "16:01", text: "廣安里海水浴場", stay: "3小時" },
-        { time: "19:30", text: "晚餐-明倫進士烤肉", type: "food" }
+        { time: "09:30", text: "甘川洞文化村", stay: "3小時" },
+        { time: "12:40", text: "午餐-札嘎其市場", type: "food" },
+        { time: "14:00", text: "BIFF 廣場", stay: "3小時" },
+        { time: "15:30", text: "南川洞櫻花路", highlight: true },
+        { time: "15:30", text: "廣安里海水浴場", stay: "3小時" },
+        { time: "18:00", text: "晚餐-匠人鐵板雞 ＆ 西面巡禮", type: "food" }
     ],
     5: [
-        { time: "09:00", text: "釜山至鎮海", highlight: true },
-        { time: "10:30", text: "慶和站公園 (櫻花鐵道)", stay: "1.5小時" },
-        { time: "12:30", text: "余佐川櫻花徑", stay: "4小時" },
-        { time: "18:00", text: "西面巡禮 & 匠人鐵板雞", type: "food" }
+        { time: "09:30", text: "釜山至鎮海", highlight: true },
+        { time: "11:00", text: "慶和站公園 (櫻花鐵道)", stay: "1.5小時" },
+        { time: "13:00", text: "余佐川櫻花徑", stay: "3.5小時" },
+        { time: "18:00", text: "晚餐-明倫進士烤肉 ＆ 西面巡禮 ", type: "food" }
     ],
     6: [
         { time: "09:00", text: "太宗台", stay: "3小時" },
         { time: "12:40", text: "午餐-影島海女村", type: "food" },
         { time: "14:25", text: "東山海水川櫻花路", stay: "1小時" },
-        { time: "15:40", text: "下午茶-P.ARK", type: "food", stay: "1.5小時" },
-        { time: "17:15", text: "晚餐-豆田裡", type: "food", stay: "1.5小時" },
+        { time: "16:00", text: "下午茶-P.ARK", type: "food", stay: "1.5小時" },
+        { time: "18:00", text: "晚餐-Lee Jae Mo Pizza", type: "food", stay: "1小時" },
         { time: "19:00", text: "拿行李-Toyoko Inn 釜山中央站" },
         { time: "19:30", text: "搭 SRT / KTX 至東大邱", highlight: true }
     ],
     7: [
-        { time: "09:30", text: "大邱近代胡同 (青蘿丘、大邱第一教會、三一運動路、桂山聖堂)" },
-        { time: "11:20", text: "午餐-巨松燉排骨", type: "food" },
-        { time: "12:45", text: "藥令市韓醫藥博物館" },
-        { time: "13:55", text: "下午茶-星巴克鐘路古宅店" },
-        { time: "15:45", text: "西門市場 (買棉被)", highlight: true },
-        { time: "17:15", text: "晚餐-PURADAK CHICKEN", type: "food", stay: "1.5小時" },
-        { time: "19:10", text: "拿行李-大邱水晶飯店" },
-        { time: "20:10", text: "抵達大邱國際機場" }
+        { time: "11:00", text: "大邱近代胡同 (青蘿丘、大邱第一教會、三一運動路、桂山聖堂)" },
+        { time: "13:00", text: "午餐-巨松燉排骨", type: "food" },
+        { time: "14:15", text: "藥令市韓醫藥博物館" },
+        { time: "15:00", text: "下午茶-星巴克鐘路古宅店" },
+        { time: "16:20", text: "大邱中央站周邊商圈" },
+        { time: "18:00", text: "晚餐-PURADAK CHICKEN / 大邱美食", type: "food", stay: "1.5小時" },
+        { time: "19:20", text: "拿行李-大邱水晶飯店" },
+        { time: "20:20", text: "抵達大邱國際機場" }
     ]
 };
 
