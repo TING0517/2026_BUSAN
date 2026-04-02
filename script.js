@@ -47,11 +47,10 @@ const itinerary = {
         { time: "18:00", text: "晚餐-匠人鐵板雞 ＆ 西面巡禮", type: "food" }
     ],
     6: [
-        { time: "09:00", text: "太宗台", stay: "3小時" },
-        { time: "12:40", text: "午餐-影島海女村", type: "food" },
-        { time: "14:25", text: "東山海水川櫻花路", stay: "1小時" },
-        { time: "16:00", text: "下午茶-P.ARK", type: "food", stay: "1.5小時" },
-        { time: "18:00", text: "晚餐-Lee Jae Mo Pizza", type: "food", stay: "1小時" },
+        { time: "10:00", text: "太宗台", stay: "3小時" },
+        { time: "13:30", text: "午餐-影島海女村", type: "food" },
+        { time: "15:30", text: "下午茶-P.ARK", type: "food", stay: "1.5小時" },
+        { time: "17:30", text: "晚餐-Lee Jae Mo Pizza-釜山站店", type: "food", stay: "1小時" },
         { time: "19:00", text: "拿行李-Toyoko Inn 釜山中央站" },
         { time: "19:30", text: "搭 SRT / KTX 至東大邱", highlight: true }
     ],
