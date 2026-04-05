@@ -363,7 +363,7 @@ function renderWeatherUI(containerId, data) {
 
     for (let i = 0; i < hourly.time.length; i++) {
         const timeObj = new Date(hourly.time[i]);
-        
+
         // 跳過過去的小時，只顯示從現在開始的預報
         if (timeObj < new Date(now.getTime() - 60 * 60 * 1000)) continue;
 
@@ -372,7 +372,7 @@ function renderWeatherUI(containerId, data) {
         const code = hourly.weathercode[i];
         const hTemp = Math.round(hourly.temperature_2m[i]);
         const hProb = hourly.precipitation_probability[i];
-        
+
         // 判斷是否為跨日的第一個小時或是今天
         const isNewDay = hour === 0;
         const displayTime = hour === 0 ? `<span class="text-sky-300">${dateStr}</span>` : `${hour}:00`;
