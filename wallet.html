@@ -51,7 +51,30 @@
 
 </head>
 
-<body class="pb-32 no-bounce">
+<body class="pb-32 bg-slate-50 no-bounce">
+
+    <!-- Header -->
+    <header class="coastal-gradient pt-8 pb-12 px-6 rounded-b-[2.5rem] shadow-xl relative overflow-hidden">
+        <div class="relative z-10 flex flex-col gap-6">
+            <div class="px-1 text-white">
+                <h1 class="text-3xl font-black mb-1 tracking-tight drop-shadow-md">匯率計算機</h1>
+            </div>
+        </div>
+
+        <!-- Waves SVG -->
+        <svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none"
+            shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                <use href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use href="#gentle-wave" x="48" y="7" fill="#f8fafc" />
+            </g>
+        </svg>
+    </header>
 
     <!-- Main Content Area -->
     <main id="main-content" class="px-4 mt-4">
