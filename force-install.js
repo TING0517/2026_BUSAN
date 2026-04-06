@@ -128,7 +128,7 @@ if (!isStandalone && !isLocalhost && !isDev) {
                     <div class="force-icon-circle">
                         <i class="fas fa-plane-departure"></i>
                     </div>
-                    <h2 class="force-title">專屬旅行 App</h2>
+                    <h2 class="force-title">Liu Family 旅行 App</h2>
                     <p class="force-subtitle">為確保資料同步與順暢體驗，<br>本應用程式僅供安裝後使用。</p>
                     
                     <div class="force-instruction-box">
