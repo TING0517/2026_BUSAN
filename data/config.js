@@ -15,11 +15,19 @@ export const trips = [
             { type: 'dep', label: '去程 3/29 · 濟州航空 7C6164', time: '02:50 TPE → 06:10 PUS' },
             { type: 'arr', label: '回程 4/4 · 德威航空 TW663', time: '22:50 TAE → 00:25 TPE' }
         ]
+    },
+    {
+        id: 'legacy_sample',
+        name: '2023 京都賞楓 (範例)',
+        startDate: '2023-11-20',
+        endDate: '2023-11-25',
+        coverImg: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=600&auto=format&fit=crop',
+        pdfUrl: 'https://github.com/TING0517/2026_BUSAN/blob/main/example.pdf'
     }
 ];
 
 export function getCurrentTripId() {
-    return localStorage.getItem('currentTripId') || '2026_busan';
+    return localStorage.getItem('currentTripId');
 }
 
 export function setCurrentTripId(id) {
