@@ -32,6 +32,15 @@ html {
     /* 確保 html 層級也禁用 */
 }
 
+/* Disable scrolling for empty/placeholder pages */
+.no-bounce {
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100% !important;
+    height: 100% !important;
+    touch-action: none !important;
+}
+
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;

@@ -1,17 +1,24 @@
 {
-  "name": "2026釜山海岸賞櫻之旅",
-  "short_name": "釜山賞櫻",
-  "description": "釜山與大邱之旅隨身小幫手",
-  "start_url": "index.html",
+  "name": "Liu Family 萬用旅行 App",
+  "short_name": "Liu 旅行",
+  "description": "專為 Liu Family 打造的萬用旅行紀錄與規劃 App",
+  "start_url": "./index.html",
+  "id": "/",
   "display": "standalone",
-  "background_color": "#03045E",
-  "theme_color": "#0077B6",
+  "background_color": "#BCE3FF",
+  "theme_color": "#5DADE2",
   "icons": [
     {
       "src": "icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
