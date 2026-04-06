@@ -19,7 +19,8 @@ const ASSETS = [
   'manifest.json',
   'icon.png',
   'data/config.js',
-  'data/theme-manager.js'
+  'data/theme-manager.js',
+  'force-install.js'
 ];
 
 // 安裝時立即接管
